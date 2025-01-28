@@ -21,9 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::namespace('API')->group(function(){
+    // ini route untuk area login
     Route::post('/login', [UserController::class,'login']);
     Route::post('/register', [UserController::class,'register']);
 
     Route::middleware('auth:sanctum')->post('/logout', [UserController::class, 'logout']);
     Route::middleware('auth:sanctum')->post('/updateProfile', [UserController::class, 'updateProfile']);
+    // End ini route untuk area login
 });
