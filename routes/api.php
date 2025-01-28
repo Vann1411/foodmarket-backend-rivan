@@ -26,4 +26,6 @@ Route::namespace('API')->group(function(){
 
     Route::middleware('auth:sanctum')->post('/logout', [UserController::class, 'logout']);
     Route::middleware('auth:sanctum')->post('/updateProfile', [UserController::class, 'updateProfile']);
+
+    // ini commit dari rivan
 });
